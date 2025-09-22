@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ValueVaultX | Roblox Value Lists for Every Game</title>
+    <meta
+      name="description"
+      content="Browse every Roblox game value list offered by ValueVaultX. Discover curated trading data, live updates, and jump straight into the games you care about."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-backdrop" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">ValueVaultX</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#value-lists">Value lists</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="container hero__layout">
+          <div class="hero__copy">
+            <p class="eyebrow">Roblox Trading Intelligence</p>
+            <h1>Every value list, one beautiful home.</h1>
+            <p class="lead">
+              Discover the full suite of games we track at ValueVaultX. Each value
+              list is powered by live APIs, curated insights, and built for
+              serious traders who need fast, reliable data.
+            </p>
+            <div class="hero__cta">
+              <a class="button button--primary" href="#value-lists">Explore value lists</a>
+              <a class="button button--ghost" href="#about">Why ValueVaultX?</a>
+            </div>
+            <dl class="hero__stats" aria-label="Platform snapshot">
+              <div>
+                <dt id="stat-total">0</dt>
+                <dd>Value lists available</dd>
+              </div>
+              <div>
+                <dt>Live</dt>
+                <dd>Updates sourced from secure APIs</dd>
+              </div>
+              <div>
+                <dt>100%</dt>
+                <dd>Optimised for traders and collectors</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero-card">
+              <div class="hero-card__blur"></div>
+              <div class="hero-card__body">
+                <span class="hero-card__tag">Featured list</span>
+                <h3 id="heroFeaturedName">Loading…</h3>
+                <p id="heroFeaturedDescription">
+                  We are preparing something special. Hang tight while we fetch
+                  the freshest data for you.
+                </p>
+                <div class="hero-card__footer">
+                  <span id="heroFeaturedCount">0 items tracked</span>
+                  <button class="button button--micro" id="heroRefresh" type="button">
+                    Refresh
+                  </button>
+                </div>
+              </div>
+              <div class="hero-card__media" id="heroFeaturedArt"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="value-lists">
+        <div class="container">
+          <div class="section__header">
+            <div>
+              <p class="eyebrow">Our library</p>
+              <h2>Browse every Roblox game value list we maintain</h2>
+              <p class="muted">
+                Cards populate directly from the ValueVaultX API so you always
+                have an up-to-date snapshot of what we cover.
+              </p>
+            </div>
+            <div class="status" role="status" aria-live="polite">
+              <span id="gamesCount">Loading value lists…</span>
+            </div>
+          </div>
+
+          <div class="toolbar" role="search">
+            <label class="field" for="gameSearch">
+              <span class="field__icon" aria-hidden="true">🔍</span>
+              <input
+                id="gameSearch"
+                type="search"
+                name="search"
+                placeholder="Search for a game or description"
+                autocomplete="off"
+              />
+            </label>
+            <label class="field field--select" for="sortSelect">
+              <span class="field__icon" aria-hidden="true">↕️</span>
+              <select id="sortSelect" name="sort">
+                <option value="featured">Featured order</option>
+                <option value="name-asc">Name A → Z</option>
+                <option value="name-desc">Name Z → A</option>
+              </select>
+            </label>
+            <button class="button button--secondary" id="refreshButton" type="button">
+              Refresh data
+            </button>
+          </div>
+
+          <div class="game-grid" id="gamesGrid" role="list"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <h3>No value lists match your search.</h3>
+            <p>Try a different keyword or reset the search field.</p>
+            <button class="button button--ghost" id="clearSearch" type="button">
+              Clear search
+            </button>
+          </div>
+          <div class="empty-state empty-state--error" id="errorState" hidden>
+            <h3>We couldn’t load the value lists.</h3>
+            <p id="errorMessage">Please check your connection and try again.</p>
+            <button class="button button--primary" id="retryButton" type="button">
+              Try again
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="about">
+        <div class="container about">
+          <div>
+            <h2>Trusted data for competitive Roblox traders</h2>
+            <p>
+              ValueVaultX brings together accurate value tracking across
+              different Roblox experiences. Every list is curated with
+              high-resolution imagery, clean design, and deep links to dynamic
+              data sources so you can focus on trading.
+            </p>
+            <ul class="feature-list">
+              <li>Real-time updates from dedicated APIs</li>
+              <li>Consistent formatting across every game</li>
+              <li>Search, sort, and filter to find the right markets fast</li>
+            </ul>
+          </div>
+          <div class="about__card">
+            <h3>Need a new game covered?</h3>
+            <p>
+              We are always expanding. Reach out if there’s a value list you want
+              to see on ValueVaultX.
+            </p>
+            <a class="button button--primary" href="#contact">Contact the team</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer__layout">
+        <div>
+          <span class="brand">ValueVaultX</span>
+          <p class="muted">
+            Built by traders, for traders. All Roblox assets referenced belong to
+            their respective owners.
+          </p>
+        </div>
+        <div class="footer__links">
+          <a href="#top">Back to top</a>
+          <a href="mailto:hello@valuevaultx.com">Email</a>
+          <a href="https://discord.com" target="_blank" rel="noreferrer">
+            Discord
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

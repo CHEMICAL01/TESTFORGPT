@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ValueVaultX | Value List</title>
+    <meta
+      name="description"
+      content="Dive into a Roblox value list powered by ValueVaultX. Data loads dynamically from dedicated APIs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-backdrop" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html">ValueVaultX</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html#value-lists">Value lists</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container value-detail" id="valueDetail">
+          <div class="value-detail__placeholder" id="detailPlaceholder">
+            <h2>Loading the value list…</h2>
+            <p>
+              We’re getting the latest metadata ready. If this message stays
+              longer than a moment, head back to the home page and select a value
+              list again.
+            </p>
+            <a class="button button--ghost" href="index.html">Back to home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__layout">
+        <div>
+          <span class="brand">ValueVaultX</span>
+          <p class="muted">
+            Built by traders, for traders. All Roblox assets referenced belong to
+            their respective owners.
+          </p>
+        </div>
+        <div class="footer__links">
+          <a href="index.html#top">Back to top</a>
+          <a href="mailto:hello@valuevaultx.com">Email</a>
+          <a href="https://discord.com" target="_blank" rel="noreferrer">Discord</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="value-list.js"></script>
+  </body>
+</html>
