@@ -90,6 +90,18 @@ function normalizeGame(entry, index) {
     ? entry.valueListName.trim()
     : `Untitled value list ${index + 1}`;
 
+  const fieldNames = Array.isArray(entry.fieldNames)
+    ? entry.fieldNames.map((label) =>
+        typeof label === "string" ? label : String(label ?? "")
+      )
+    : [];
+
+  const fieldIds = Array.isArray(entry.fieldIds)
+    ? entry.fieldIds
+        .map((id) => (typeof id === "string" ? id : String(id ?? "")))
+        .filter((id) => id.length)
+    : [];
+
   return {
     valueListName: name,
     seoDescription:
@@ -99,6 +111,8 @@ function normalizeGame(entry, index) {
     gameBackground: sanitizeUrl(entry.gameBackground),
     gameIcon: sanitizeUrl(entry.gameIcon),
     valueListApi: sanitizeUrl(entry.valueListApi),
+    fieldNames,
+    fieldIds,
   };
 }
 
@@ -268,6 +282,8 @@ function handleOpenValueList(game) {
     background: game.gameBackground,
     icon: game.gameIcon,
     api: game.valueListApi,
+    fieldNames: Array.isArray(game.fieldNames) ? game.fieldNames : [],
+    fieldIds: Array.isArray(game.fieldIds) ? game.fieldIds : [],
     timestamp: Date.now(),
   };
 
