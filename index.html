@@ -12,6 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaulted Values - Roblox Item Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -184,6 +190,132 @@
             Discord
           </a>
         </div>
+    <header class="top-bar">
+      <div class="logo">Vaulted Values</div>
+      <nav>
+        <ul>
+          <li><a href="#market">Value List</a></li>
+          <li><a href="#trending">Trending</a></li>
+          <li><a href="#updates">Update Log</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="pill-button" aria-label="Toggle theme">
+        <span class="icon">🌙 ok</span>
+        <span class="label">Dark</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="badge">Roblox Trading Companion</p>
+          <h1>Your trusted Roblox value list</h1>
+          <p class="subheading">
+            Track limiteds, keep up with market trends, and make smarter trades
+            with a clean, fast interface inspired by the community favourite
+            VaultedValuesX.
+          </p>
+          <div class="cta-row">
+            <a class="primary" href="#market">Browse values</a>
+            <a class="ghost" href="#updates">See recent changes</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Market snapshot</h3>
+          <div class="stats-grid" id="statsGrid"></div>
+          <div class="tagline">Updated live with every refresh 🔁</div>
+        </div>
+      </section>
+
+      <section class="search" id="market">
+        <div class="search-bar">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search by item name, trend, or demand"
+            aria-label="Search items"
+          />
+          <div class="filters" role="toolbar" aria-label="Item categories">
+            <button class="pill-button active" data-filter="all">All</button>
+            <button class="pill-button" data-filter="limited">Limiteds</button>
+            <button class="pill-button" data-filter="collectible">
+              Collectibles
+            </button>
+            <button class="pill-button" data-filter="ugc">UGC Limiteds</button>
+            <button class="pill-button" data-filter="event">Event</button>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table aria-label="Roblox item value list">
+            <thead>
+              <tr>
+                <th data-sort="name">Item</th>
+                <th data-sort="value">Value (R$)</th>
+                <th data-sort="trend">Trend</th>
+                <th data-sort="demand">Demand</th>
+                <th data-sort="projected">Projected?</th>
+                <th data-sort="updated">Last update</th>
+              </tr>
+            </thead>
+            <tbody id="itemTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="trending" id="trending">
+        <header>
+          <h2>Hot movers</h2>
+          <p>Hand picked items making waves in the trading scene right now.</p>
+        </header>
+        <div class="cards" id="trendingCards"></div>
+      </section>
+
+      <section class="columns">
+        <article class="card" id="updates">
+          <h2>Update log</h2>
+          <ul class="timeline" id="changelogList"></ul>
+        </article>
+        <article class="card" id="faq">
+          <h2>Trading tips & FAQ</h2>
+          <div class="faq-item">
+            <h3>How often is the list updated?</h3>
+            <p>
+              Values are reviewed daily by experienced traders and algorithms
+              that monitor marketplace sales. Refresh the page to retrieve the
+              latest update snapshot.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>What does the trend column mean?</h3>
+            <p>
+              Trend is our short-term momentum indicator. Items marked as
+              <strong>Rising</strong> are increasing in value, while
+              <strong>Cooling</strong> suggests a temporary slowdown.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How do I report an incorrect value?</h3>
+            <p>
+              Join our Discord community to submit sales proof and feedback.
+              Verified reports help us keep the list accurate for everyone.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Built for the Roblox trading community. Not affiliated with Roblox
+        Corporation.
+      </p>
+      <div class="footer-links">
+        <a href="#market">Value List</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://www.roblox.com/groups/" target="_blank" rel="noreferrer"
+          >Community</a
+        >
       </div>
     </footer>
 
